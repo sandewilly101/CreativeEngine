@@ -11,7 +11,7 @@
     "db:setup": "npm --prefix server run db:setup",
     "dev": "concurrently -n api,web -c blue,magenta \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
     "build": "npm --prefix server install --omit=dev && npm --prefix client install && npm --prefix client run build",
-    "start": "npm --prefix server start"
+    "start": "node server/scripts/seed-uploads.mjs && npm --prefix server start"
   },
   "devDependencies": {
     "concurrently": "^9.1.0"
