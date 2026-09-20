@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "description": "Creative Engine — Integrated Creative, Digital, AI, Events & Production Platform",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "install:all": "npm install && npm --prefix server install && npm --prefix client install",
     "db:setup": "npm --prefix server run db:setup",
     "dev": "concurrently -n api,web -c blue,magenta \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
-    "build": "npm --prefix client run build",
+    "build": "npm --prefix server install --omit=dev && npm --prefix client install && npm --prefix client run build",
     "start": "npm --prefix server start"
   },
   "devDependencies": {

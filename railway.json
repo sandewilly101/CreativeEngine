@@ -1,9 +1,5 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
-  "build": {
-    "builder": "NIXPACKS",
-    "buildCommand": "npm install --prefix server --omit=dev && npm install --prefix client && npm run build"
-  },
   "deploy": {
     "startCommand": "npm start",
     "healthcheckPath": "/api/health",
