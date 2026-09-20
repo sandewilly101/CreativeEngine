@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output
+client/dist/
+
+# Environment — secrets stay local; .env.example is the committed template
+.env
+.env.local
+server/.env
+server/.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
